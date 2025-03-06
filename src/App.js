@@ -6,14 +6,16 @@ import { Home, ExerciseDetail } from './pages';
 
 function App() {
   return (
-    <Box width="400px" sx={{ width: { xl: '1488px' }}} m='auto' >
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/exercise/:id' element={<ExerciseDetail />} />
-      </Routes>
-      <Footer />
-    </Box>
+    <div className="app-container">
+      <Box sx={{ width: { xs: '100%', md: '768px', xl: '1488px' }, margin: 'auto' }}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/exercise/:id" element={<ExerciseDetail />} />
+        </Routes>
+
+      </Box>
+    </div>
   );
 }
 
